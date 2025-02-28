@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 import os
 
 load_dotenv()
-api_key= os.getenv('api_key')
+API_KEY_2 = os.getenv('API_KEY_2')
 
 API_KEY = os.getenv('API_KEY')
 def math_operation(op, *args):
@@ -178,7 +178,7 @@ def password_generated(pass_leng=24):
 
 def get_weather(cities=["Kyiv", "London", "Berlin", "New York", "Tokyo"]):
     for city in cities:
-        url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}&units=metric&lang=uk"
+        url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={API_KEY_2}&units=metric&lang=uk"
         response = requests.get(url)
 
         if response.status_code == 200:
